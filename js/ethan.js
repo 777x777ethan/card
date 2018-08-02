@@ -37,8 +37,11 @@ function TopFunction(){
 };
 
 var seeH=window.innerHeight||document.body.clientHeight||document.documentElement.clientHeight;
+
 window.onscroll=function(){
-    if(document.documentElement.scrollTop>document.documentElement.clientHeight/2){
+    var seeHNow=document.body.scrollTop||document.documentElement.scrollTop;
+    console.log(seeHNow);
+    if(seeHNow>seeH/2){
         document.getElementById("topicon").style.display="block";
     }else{
         document.getElementById("topicon").style.display="none";
