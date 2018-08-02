@@ -40,7 +40,6 @@ var seeH=window.innerHeight||document.body.clientHeight||document.documentElemen
 
 window.onscroll=function(){
     var seeHNow=document.body.scrollTop||document.documentElement.scrollTop;
-    console.log(seeHNow);
     if(seeHNow>seeH/2){
         document.getElementById("topicon").style.display="block";
     }else{
