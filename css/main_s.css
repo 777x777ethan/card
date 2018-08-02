@@ -3,6 +3,9 @@
     .run_work{
         display: none;
     }
+    .act_type{
+        width: 100vw;
+    }
 }
 /*內頁*/
 @media screen and (max-width: 640px){

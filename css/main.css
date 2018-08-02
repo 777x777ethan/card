@@ -37,11 +37,14 @@ p{
 
 
 .act_type{
-    height: 50px;
-    width: 100vw;
+    width: 900px;
     margin: 0px auto;
-    border-bottom: #e6e6e6 1px solid;
-    background-color: #a3a3a3;
+    overflow: hidden;
+}
+.act_type{
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0px;　
 }
 .action_work{
     float: left;
