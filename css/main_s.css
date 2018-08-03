@@ -9,20 +9,11 @@
 }
 /*內頁*/
 @media screen and (max-width: 640px){
-    .person_inf{
+    .person_inf,.block_03{
         width: 320px;
-        height: 1520px;
-    }
-    .title_pic div:nth-child(2){
-        font-size: 24px;
-        font-weight: 300;
     }
 }
-@media screen and (max-width: 1300px){
-    .title_pic{
-        margin:80px auto 80px;
-    }
-}
+
 @media screen and (max-width: 640px){
     #topicon{
         right: 10px;

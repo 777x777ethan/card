@@ -1,6 +1,7 @@
 window.onresize = WindowChange;
 window.onload = function(){
     WindowChange();
+
     loding();
 }
 function WindowChange(){
@@ -41,4 +42,16 @@ function WindowChange(){
     title_pic[1].style.top=max+80+"px";
     var brand=document.getElementsByClassName("brand");
     brand[0].style.top=block[wheremax]+80+"px";
+}
+
+function IneedAgive(){
+    var ineed=parseInt(getElementByClass_Value("ineed","height"));
+    var igive=parseInt(getElementByClass_Value("igive","height"));
+    if(ineed>igive){
+        var classs=document.getElementsByClassName("igive");
+        classs[0].style.height=ineed+"px";
+    }else{
+        var classs=document.getElementsByClassName("ineed");
+        classs[0].style.height=ineed+"px";
+    }
 }
