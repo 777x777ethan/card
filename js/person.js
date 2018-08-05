@@ -1,11 +1,15 @@
-window.onresize = WindowChange;
+window.onresize = function(){
+    allflot_img();
+    flot_img();
+}
 window.onload = function(){
-    WindowChange();
-
+    allflot_img();
+    IneedAgive();
+    flot_img();
     loding();
 }
-function WindowChange(){
-    var width_img=300;
+function allflot_img(){
+    var width_img=260;
     var blockQ=parseInt(parseFloat(getElementByClass_Value("person_pic","width"))/width_img);
     var space=(parseFloat(getElementByClass_Value("person_pic","width"))-width_img*blockQ)/(blockQ*2);
     var allflot_img=document.getElementsByClassName("allflot_img");
@@ -26,7 +30,7 @@ function WindowChange(){
     }
     var block= new Array();
     for(let i=0;i<blockQ;i++){
-        block[i]=0;
+        block[i]=50;
     }
     for (let i=0;i<allflot_img.length;i++){
         var min=Math.min.apply(null, block);
@@ -41,7 +45,7 @@ function WindowChange(){
     var wheremax=block.indexOf(max);
     title_pic[1].style.top=max+80+"px";
     var brand=document.getElementsByClassName("brand");
-    brand[0].style.top=block[wheremax]+80+"px";
+    brand[0].style.top=block[wheremax]+110+"px";
 }
 
 function IneedAgive(){
@@ -53,5 +57,29 @@ function IneedAgive(){
     }else{
         var classs=document.getElementsByClassName("ineed");
         classs[0].style.height=ineed+"px";
+    }
+}
+
+function flot_img(){
+    var ActMargin=document.getElementsByClassName("all_img");
+    var ActWidth=parseFloat(getElementByClass_Value("all_img","width"));
+    var brand=parseFloat(getElementByClass_Value("brand","width"));
+    var NewMargin=(brand-Math.floor(brand/(ActWidth))*(ActWidth+1))/(2*Math.floor(brand/(ActWidth)));
+    var NewMargin2=(brand-(Math.floor(brand/(ActWidth))-1)*(ActWidth+1))/(2*(Math.floor(brand/(ActWidth))-1));
+    if(brand<=340){
+        for(let i=0;i < ActMargin.length;i++){
+            ActMargin[i].style.margin="20px "+NewMargin+"px";
+        }
+    }
+    else{
+        if(NewMargin<=10){
+            for(let i=0;i < ActMargin.length;i++){
+                ActMargin[i].style.margin="20px "+NewMargin2+"px";
+            }
+        }else{
+            for(let i=0;i < ActMargin.length;i++){
+                ActMargin[i].style.margin="20px "+NewMargin+"px";
+            }
+        }
     }
 }

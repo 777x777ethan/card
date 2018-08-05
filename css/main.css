@@ -334,6 +334,11 @@ small{
     padding: 40px 0 100px;
     border-top: 1px rgb(0, 0, 0) solid;
 }
+.pagelogo{
+    width: 80vw;
+    max-width: 320px;
+    margin: 10px auto;
+}
 .person_pic{
     width: 95vw;
     min-width: 320px;
@@ -376,4 +381,7 @@ img{
     width: 300px;
     top:0px;
     left: 0px;
+}
+.allflot_img p{
+    padding:3px 0 10px 5px;
 }
