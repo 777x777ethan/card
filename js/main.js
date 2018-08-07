@@ -1,17 +1,18 @@
+/* 2018 coding by 777x777 */
 window.onresize = WindowChange;
 window.onload = function(){
-    loding();
     WindowChange();
-    picWH();
-    
+    loding();
 }
 
 function WindowChange(){
     var ActMargin=document.getElementsByClassName("action_work");
     var ActWidth=parseFloat(getElementByClass_Value("action_work","width"));
-    var BodyWidth=document.body.clientWidth;
-    var NewMargin=(BodyWidth-Math.floor(BodyWidth/(ActWidth))*(ActWidth+1))/(2*Math.floor(BodyWidth/(ActWidth)));
-    var NewMargin2=(BodyWidth-(Math.floor(BodyWidth/(ActWidth))-1)*(ActWidth+1))/(2*(Math.floor(BodyWidth/(ActWidth))-1));
+    var BodyWidth=parseFloat(getElementByClass_Value("work","width"));
+    var NewMargin=(BodyWidth-Math.floor(BodyWidth/ActWidth)*(ActWidth))/(2*Math.floor(BodyWidth/ActWidth));
+    var NewMargin2=(BodyWidth-(Math.floor(BodyWidth/ActWidth)-1)*(ActWidth))/(2*(Math.floor(BodyWidth/(ActWidth))-1));
+    console.log(NewMargin);
+    console.log(NewMargin2);
     if(BodyWidth<=340){
         for(let i=0;i < ActMargin.length;i++){
             ActMargin[i].style.margin="20px "+NewMargin+"px";
@@ -69,18 +70,4 @@ function work_f(work){
         workDiv.style.width=y+"%";
         y--;
     })
-}
-
-function picWH(){
-    var picWHs=document.getElementsByClassName("comlogo");
-    for(let i=0;i < picWHs.length;i++){
-        var picWHsClass=picWHs[i].getElementsByTagName("img")[0];
-        var picWHsStyle=window.getComputedStyle(picWHsClass);
-        var picHV=parseInt(picWHsStyle.getPropertyValue("height"));
-        var comlogoH=parseInt(getElementByClass_Value("comlogo","height"));
-        if(picHV>comlogoH){
-            picWHsClass.style.height="100%";
-            picWHsClass.style.width="auto";
-        }
-    }
 }

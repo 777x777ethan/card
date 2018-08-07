@@ -1,3 +1,4 @@
+/* 2018 coding by 777x777 */
 window.onresize = function(){
     allflot_img();
     flot_img();
@@ -56,7 +57,7 @@ function IneedAgive(){
         classs[0].style.height=ineed+"px";
     }else{
         var classs=document.getElementsByClassName("ineed");
-        classs[0].style.height=ineed+"px";
+        classs[0].style.height=igive+"px";
     }
 }
 

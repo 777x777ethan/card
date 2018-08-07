@@ -1,10 +1,44 @@
+/* 2018 coding by 777x777 */
+
 /*首頁*/
 @media screen and (max-width: 1024px){
-    .run_work{
+    .run_work,.backgroundcolor{
         display: none;
     }
+    .yearpeople,.yearmain{
+        width: 100%;
+        max-width: 960px;
+        padding: 0px;
+    }
+}
+@media screen and (max-width: 640px){
     .act_type{
-        width: 100vw;
+        width: 320px;
+    }
+    .titleinf li{
+        padding-left: 0px;
+    }
+    .title_mar div{
+        padding-left: 0;
+    }
+}
+@media screen and (min-width: 1360px){
+    .work,.title_mar {
+        width: 1360px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 800px){
+    .titlelift{
+        width: 100%;
+    }
+    .titlelift img{
+        margin: 0 auto;
+        width: 60px;
+        display: block;
+    }
+    .titleright{
+        float: none;
     }
 }
 /*內頁*/
