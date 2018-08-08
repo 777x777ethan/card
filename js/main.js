@@ -11,8 +11,6 @@ function WindowChange(){
     var BodyWidth=parseFloat(getElementByClass_Value("work","width"));
     var NewMargin=(BodyWidth-Math.floor(BodyWidth/ActWidth)*(ActWidth))/(2*Math.floor(BodyWidth/ActWidth));
     var NewMargin2=(BodyWidth-(Math.floor(BodyWidth/ActWidth)-1)*(ActWidth))/(2*(Math.floor(BodyWidth/(ActWidth))-1));
-    console.log(NewMargin);
-    console.log(NewMargin2);
     if(BodyWidth<=340){
         for(let i=0;i < ActMargin.length;i++){
             ActMargin[i].style.margin="20px "+NewMargin+"px";

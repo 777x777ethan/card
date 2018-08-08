@@ -48,6 +48,11 @@ window.onscroll=function(){
 }
 
 function loding(){
+    document.getElementById("wrapper").style.display="none";
+    setTimeout("lodingopen()",300); 　
+    
+}
+function lodingopen(){
     var z=0;
     var opaopen=window.setInterval(function(){
         z++
@@ -55,7 +60,8 @@ function loding(){
             window.clearInterval(opaopen);
             return;
         }
-        document.body.style.opacity=z/100; 
-    },10);
+        document.getElementById("loding").style.opacity=z/100; 
+    },10)
 }
+
 /* 777x777自定義底 */

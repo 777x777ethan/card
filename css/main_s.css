@@ -10,6 +10,15 @@
         max-width: 960px;
         padding: 0px;
     }
+    .yearmain .article{
+        margin: 0 20px;
+    }
+    .yearmain div:nth-child(1){
+        left:10px;
+    }
+    .yearmain div:nth-child(2){
+        margin-top: 50px;
+    }
 }
 @media screen and (max-width: 640px){
     .act_type{
@@ -20,6 +29,16 @@
     }
     .title_mar div{
         padding-left: 0;
+    }
+    .titlemain{
+        width:100vw;
+    }
+    .title_pic div:nth-of-type(1){
+        font-size: 32px;
+        font-weight: 400;
+    }
+    .title_pic span{
+        font-size: 16px;
     }
 }
 @media screen and (min-width: 1360px){
